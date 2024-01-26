@@ -10,6 +10,8 @@ export default {
       'sans' : ['"Open Sans"', 'Helvetica', 'sans-serif'],
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
 

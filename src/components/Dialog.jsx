@@ -5,7 +5,7 @@ function Dialog({openDialog, setOpenDialog}) {
 
   return (
     <div className='w-screen h-screen bg-slate-800 absolute top-0 left-0 bg-opacity-40 flex justify-center pt-[200px]' >
-        <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, ease: [0, 0.71, 0.2, 1.01], scale: {type: "spring", damping: 5, stiffness: 100, restDelta: 0.001}}} className="h-1/3 w-1/4 bg-white rounded-lg shadow-lg p-4 flex flex-col justify-between">
+        <div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, ease: [0, 0.71, 0.2, 1.01], scale: {type: "spring", damping: 5, stiffness: 100, restDelta: 0.001}}} className="h-1/3 w-1/4 bg-white rounded-lg shadow-lg p-4 flex flex-col justify-between">
             <div className="flex justify-between items-center border-b-2 border-b-gray-100">
                 <div className="uppercase text-small font-semibold p-2 flex-1 text-gray-600">
                     <h3>Logout Confirmation</h3>
@@ -25,7 +25,7 @@ function Dialog({openDialog, setOpenDialog}) {
                 <button className="bg-slate-200 rounded px-3 py-1 shadow transition-all hover:bg-slate-800 hover:text-white hover:scale-105" onClick={() => { setOpenDialog(false) }}>Cancel</button>
                 <Link to={"/"} className="rounded px-3 py-1 bg-indigo-500 text-white shadow transition-all hover:bg-slate-800 hover:text-white hover:scale-105">Confirm</Link>
             </div>
-        </motion.div>
+        </div>
     </div>
   )
 

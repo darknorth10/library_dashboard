@@ -1,6 +1,7 @@
 import { useState, userState } from "react"
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
+import { FaMotorcycle } from "react-icons/fa6";
 
 export const Login = () => {
 
@@ -54,14 +55,12 @@ export const Login = () => {
   
     <div className="h-screen w-full bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-teal-500 to-90% pt-[100px]">
 
-      <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01]}} className="flex bg-white w-[26%] flex-1 flex-col justify-center px-6 py-14 lg:px-8 rounded-lg shadow-lg mx-auto">
+      <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01]}} className="flex bg-slate-100 w-[26%] flex-1 flex-col justify-center px-6 py-14 lg:px-8 rounded-lg shadow-lg mx-auto">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mx-auto h-[80px] w-auto text-indigo-600">
-                <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
-            </svg>
+            <FaMotorcycle className="text-5xl text-teal-500 mx-auto p-3 rounded-lg box-content bg-white shadow" />
 
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-teal-600 uppercase">
+            Sign in
           </h2>
         </div>
 
@@ -89,7 +88,7 @@ export const Login = () => {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                  <a href="#" className="font-semibold text-black-600 hover:text-indigo-500">
                     Forgot password?
                   </a>
                 </div>
@@ -109,7 +108,7 @@ export const Login = () => {
             <div>
               <button
                 type="button" onClick={handleLogin}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-teal-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
               </button>
