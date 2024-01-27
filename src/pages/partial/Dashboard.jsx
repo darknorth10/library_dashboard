@@ -11,14 +11,17 @@ export const Dashboard = () => {
     const [openDialog, setOpenDialog] = useState(false)
     const redirect = useNavigate()
 
+    
   return (
     <>
+    
     <div className="flex flex-col h-screen bg-slate-200">
         <Header setOpenDialog={setOpenDialog}/>
 
         <div className="flex gap-5 justify-between w-4/5 mx-auto my-3 flex-1 p-4">
             <Sidebar />
-
+            
+            
             {/* Contents */}
             <div className="grow px-4 pb-4 flex flex-col gap-8">
 

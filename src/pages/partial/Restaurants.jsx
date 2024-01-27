@@ -5,11 +5,18 @@ import mcdo from "../../assets/fastfood/mcdo.jpg"
 import chowking from "../../assets/fastfood/chowking.png"
 import inasal from "../../assets/fastfood/inasal.jpg"
 import shakeys from "../../assets/fastfood/shakeys.jpg"
+import Dialog from "../../components/Dialog.jsx"
+import { useState } from "react"
+
 
 export const Restaurants = () => {
+
+    const [openDialog, setOpenDialog] = useState(false)
+
     return (
+        <>
         <div className='bg-white flex flex-col'>
-            <Header />
+            <Header setOpenDialog={setOpenDialog}/>
             <Banner />
 
             {/* All restaurants an search */}
@@ -77,13 +84,13 @@ export const Restaurants = () => {
                     </div>
                 </div>
                 
-
                 
-               
-               
                 
             </div>
         </div>
+
+        {openDialog && <Dialog openDialog={openDialog} setOpenDialog={setOpenDialog}/>}
+        </>
     )
 }
 
